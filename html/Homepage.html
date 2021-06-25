@@ -1,0 +1,107 @@
+<A6 class="s">xようこそx</A6><a href="https://prog-8.com" class="d">WebGL</a>
+
+<style>
+@font-face {
+	font-family: 'uzura';
+	src: url(font/uzura.ttf);
+}
+.s {
+	font-family: 'uzura';
+    font-size: 6px;
+} 
+.d {
+	font-family: 'uzura';
+    font-size: 6px;
+    color: 800080;
+    text-align: center;
+} 
+.Infocss {
+	font-family: 'uzura';
+}
+.Homecss {
+	font-family: 'uzura';
+}
+.Home {
+    font-size: 34px;
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 24px;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 24px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'home')" >Home</button>
+  <button class="tablinks" onclick="openCity(event, 'lwhat')">iRioLとは</button>
+  <button class="tablinks" onclick="openCity(event, 'linfo')">iRioLの情報</button>
+</div>
+
+<div id="home" class="tabcontent">
+    <ul>
+        <div style="text-align:center" class="Homecss">
+        <font size="6" color="#800080">iRioL4 のホームページへようこそ〜！</font><br>
+
+        <a>このサイトはこの私iRioLのことを載せてる(?)サイトなので是非見ていってね！</a><br>
+        </div>
+    </ul>    
+</div>
+
+<div id="lwhat" class="tabcontent">
+    <ul>
+
+        <li><a href="#">冬休み早割まとめ</a></li>
+        <li><a href="#">お中元早割まとめ</a></li>
+        <li><a href="#">年賀状・・・</a></li>
+    </ul>    
+ </div>
+
+<div id="linfo" class="tabcontent">
+    <ul>
+        <div style="text-align:center" class="Infocss">
+        <a>コンタクトレンズ(メールアドレスです):iRioL4Co@outlook.com</a><br>
+    </ul>    
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
